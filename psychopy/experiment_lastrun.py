@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on listopad 01, 2023, at 11:11
+    on listopad 01, 2023, at 11:51
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -132,7 +132,7 @@ def setupLogging(filename):
         Text stream to receive inputs from the logging system.
     """
     # this outputs to the screen, not a file
-    logging.console.setLevel(logging.DATA)
+    logging.console.setLevel(logging.ERROR)
 
 
 def setupWindow(expInfo=None, win=None):
@@ -591,7 +591,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.reset()
         
         # set up handler to look after randomisation of conditions etc
-        trials = data.TrialHandler(nReps=25.0, method='sequential', 
+        trials = data.TrialHandler(nReps=12.0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=[None],
             seed=None, name='trials')
@@ -808,17 +808,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed 25.0 repeats of 'trials'
+        # completed 12.0 repeats of 'trials'
         
-        # get names of stimulus parameters
-        if trials.trialList in ([], [None], None):
-            params = []
-        else:
-            params = trials.trialList[0].keys()
-        # save data for this loop
-        trials.saveAsExcel(filename + '.xlsx', sheetName='trials',
-            stimOut=params,
-            dataOut=['n','all_mean','all_std', 'all_raw'])
         thisExp.nextEntry()
         
         if thisSession is not None:
@@ -826,15 +817,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             thisSession.sendExperimentData()
     # completed 8.0 repeats of 'trials_3'
     
-    # get names of stimulus parameters
-    if trials_3.trialList in ([], [None], None):
-        params = []
-    else:
-        params = trials_3.trialList[0].keys()
-    # save data for this loop
-    trials_3.saveAsExcel(filename + '.xlsx', sheetName='trials_3',
-        stimOut=params,
-        dataOut=['n','all_mean','all_std', 'all_raw'])
     
     # --- Prepare to start Routine "Thanks" ---
     continueRoutine = True
