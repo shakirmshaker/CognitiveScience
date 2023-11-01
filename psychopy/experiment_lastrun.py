@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on listopad 01, 2023, at 10:28
+    on listopad 01, 2023, at 11:11
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -370,6 +370,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
+    # Set experiment start values for variable component type
+    type = ''
+    typeContainer = []
     
     # --- Initialize components for Routine "Thanks" ---
     thx_text = visual.TextStim(win=win, name='thx_text',
@@ -642,6 +645,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _key_resp_2_allKeys = []
             letter = stimulus  # Set Routine start values for letter
             nback = nback  # Set Routine start values for nback
+            type = n  # Set Routine start values for type
             # keep track of which components have finished
             routine_1_backComponents = [stimulus_text, key_resp_2, cross1]
             for thisComponent in routine_1_backComponents:
@@ -796,6 +800,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 trials.addData('key_resp_2.duration', key_resp_2.duration)
             thisExp.addData('letter.routineEndVal', letter)  # Save end Routine value
             thisExp.addData('nback.routineEndVal', nback)  # Save end Routine value
+            thisExp.addData('type.routineEndVal', type)  # Save end Routine value
             # the Routine "routine_1_back" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -917,6 +922,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.reset()
     else:
         routineTimer.addTime(-5.000000)
+    
     
     
     
