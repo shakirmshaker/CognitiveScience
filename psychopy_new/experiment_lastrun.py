@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on listopad 12, 2023, at 23:00
+    on listopad 13, 2023, at 20:53
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -107,7 +107,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\poczt\\OneDrive\\Dokumenty\\uczelnia\\DTU_3_sem\\cognitiveExperiments\\CognitiveScience\\psychopy\\experiment_lastrun.py',
+        originPath='C:\\Users\\poczt\\OneDrive\\Dokumenty\\uczelnia\\DTU_3_sem\\cognitiveExperiments\\CognitiveScience\\psychopy_new\\experiment_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -317,7 +317,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Define the order of tests (1-back and 2-back) and randomize it
     test_order = [1,1,1,1,2,2,2,2]
     shuffle(test_order)
-    
+    doNBackCount = 0
     
     # --- Initialize components for Routine "Instructions" ---
     instr_text = visual.TextStim(win=win, name='instr_text',
@@ -348,7 +348,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     stimulus = ''
     nloop_text = '0'
     presented = []
-    doNBackCount = 0
     stimulus_text = visual.TextStim(win=win, name='stimulus_text',
         text='',
         font='Open Sans',
@@ -373,6 +372,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Set experiment start values for variable component type
     type = ''
     typeContainer = []
+    # Set experiment start values for variable component nbackcount
+    nbackcount = ''
+    nbackcountContainer = []
     
     # --- Initialize components for Routine "Thanks" ---
     thx_text = visual.TextStim(win=win, name='thx_text',
@@ -494,6 +496,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         n = test_order.pop()
         n_text = str(n)+'-back test\n\nPress space to start.'
         nback = ''
+        doNBackCount = 0
         # keep track of which components have finished
         InstructionsComponents = [instr_text, key_resp]
         for thisComponent in InstructionsComponents:
@@ -646,6 +649,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             letter = stimulus  # Set Routine start values for letter
             nback = nback  # Set Routine start values for nback
             type = n  # Set Routine start values for type
+            nbackcount = doNBackCount  # Set Routine start values for nbackcount
             # keep track of which components have finished
             routine_1_backComponents = [stimulus_text, key_resp_2, cross1]
             for thisComponent in routine_1_backComponents:
@@ -801,6 +805,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             thisExp.addData('letter.routineEndVal', letter)  # Save end Routine value
             thisExp.addData('nback.routineEndVal', nback)  # Save end Routine value
             thisExp.addData('type.routineEndVal', type)  # Save end Routine value
+            thisExp.addData('nbackcount.routineEndVal', nbackcount)  # Save end Routine value
             # the Routine "routine_1_back" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -904,6 +909,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.reset()
     else:
         routineTimer.addTime(-5.000000)
+    
     
     
     
