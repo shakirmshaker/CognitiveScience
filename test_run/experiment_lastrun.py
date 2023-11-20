@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on Tue Nov  7 13:38:11 2023
+    on Sun Nov 19 19:39:04 2023
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -107,7 +107,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/shakirmshaker/Library/Mobile Documents/com~apple~CloudDocs/DTU/CognitiveScience/Project/test_run/experiment_lastrun.py',
+        originPath='/Users/shakirmshaker/Library/Mobile Documents/com~apple~CloudDocs/Skole/DTU/CognitiveScience/Project/test_run/experiment_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
