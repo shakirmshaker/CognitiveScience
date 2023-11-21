@@ -134,8 +134,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="n_text = ''" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="n_text = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="n = test_order.splice((- 1), 1);&amp;#10;n_text = ((&quot;Test run.\n\n&quot; + n.toString()) + &quot;-back test\n\nPress space to start.&quot;);&amp;#10;nback = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="n = test_order.pop()&amp;#10;n_text = 'Test run.\n\n'+str(n)+'-back test\n\nPress space to start.'&amp;#10;nback = ''" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="n = test_order.splice((- 1), 1);&amp;#10;n_text = ((&quot;Test run.\n\n&quot; + n.toString()) + &quot;-back test\n\nPress space to start.&quot;);&amp;#10;nback = &quot;&quot;;&amp;#10;doNBackCount = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="n = test_order.pop()&amp;#10;n_text = 'Test run.\n\n'+str(n)+'-back test\n\nPress space to start.'&amp;#10;nback = ''&amp;#10;doNBackCount = 0" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>

@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
@@ -603,6 +603,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         n = test_order.pop()
         n_text = 'Test run.\n\n'+str(n)+'-back test\n\nPress space to start.'
         nback = ''
+        doNBackCount = 0
         # keep track of which components have finished
         InstructionsComponents = [instr_text, key_resp]
         for thisComponent in InstructionsComponents:
